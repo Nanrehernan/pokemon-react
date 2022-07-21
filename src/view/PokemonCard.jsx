@@ -9,19 +9,25 @@ const PokemonCard = ({ pokemon }) => {
     const getPokemonImage = async () => {
         const response = await fetch(pokemon.url)
         const data = await response.json()
-        setUrl(data.sprites.other.dream_world.front_default)
+        if (data.sprites.other.dream_world.front_default) {
+            setUrl(data.sprites.other.dream_world.front_default)
+        } else {
+            setUrl(data.sprites.other["official-artwork"].front_default)
+        }
     }
 
-    return (
-        <div className="card">
-            <div className="card-body">
-                <img src={url} alt={pokemon.name} />
+    if (url) {
+        return (
+            <div className="card">
+                <div className="card-body">
+                    <img src={url} alt={pokemon.name} />
+                </div>
+                <div className="card-footer">
+                    {pokemon.name.toUpperCase()}
+                </div>
             </div>
-            <div className="card-footer">
-                {pokemon.name.toUpperCase()}
-            </div>
-        </div>
-    )
+        )
+    }
 }
 
 export default PokemonCard

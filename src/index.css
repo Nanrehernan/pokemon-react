@@ -21,11 +21,36 @@ img {
 .header{
     height: 50px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background-color: #C0392B;
     color: #fff;
     margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    padding: 0 10px;
+}
+
+.header input{
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.header input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
+}
+
+.header input:active{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #fff;
 }
 
 .pokemon {
@@ -72,7 +97,7 @@ img {
 }
 
 .btn{
-    width: 100px;
+    width: 180px;
     padding: 10px 0;
     border: none;
     transition: all 0.3s;
