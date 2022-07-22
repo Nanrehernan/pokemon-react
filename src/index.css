@@ -18,12 +18,12 @@ img {
     padding: 10px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background-color: #C0392B;
+    background-image: linear-gradient(45deg, #000, #C0392B);
     color: #fff;
     margin-bottom: 10px;
     position: sticky;
@@ -31,16 +31,16 @@ img {
     padding: 10px;
 }
 
-@media screen and (max-width: 400px){
-    .header{
+@media screen and (max-width: 400px) {
+    .header {
         display: grid;
         grid-template-columns: 1fr;
     }
-    
+
 }
 
-.header input{
-    height: 30px;
+.header input {
+    height: 35px;
     border: none;
     background-color: transparent;
     padding: 0 10px;
@@ -49,9 +49,10 @@ img {
     background-color: #E5E7E9;
     color: #C0392B;
     font-size: 1em;
+
 }
 
-.header input:focus{
+.header input:focus {
     outline: 2px solid #D98880;
 }
 
@@ -70,6 +71,9 @@ img {
     overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    background-image: linear-gradient(45deg, rgba(150, 0, 0, 0.8), rgba(255, 150, 0, 0.8));
+
+
 }
 
 .card-body {
@@ -84,12 +88,12 @@ img {
     justify-content: center;
     align-items: center;
     font-size: 1em;
-    background-color: darkslateblue;
     color: #fff;
     letter-spacing: 0.3em;
+    background-image: linear-gradient(45deg, rgba(100, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
 }
 
-.navegacion-url{
+.navegacion-url {
     height: 50px;
     margin-top: 10px;
     display: flex;
@@ -98,20 +102,21 @@ img {
     gap: 10px;
 }
 
-.btn{
+.btn {
     width: 180px;
     padding: 10px 0;
     border: none;
     transition: all 0.3s;
     color: #fff;
     font-weight: bold;
+    border-radius: 10px;
 }
 
-.btn:hover{
+.btn:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
-.btn-primary{
-    background-color: #C0392B;
+.btn-primary {
+    background-image: linear-gradient( 99deg,  rgba(115,18,81,1) 10.6%, rgba(28,28,28,1) 118% );
 }
